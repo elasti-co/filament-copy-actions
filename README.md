@@ -10,7 +10,7 @@ An easy-to-use copy actions for Filament Admin
 ## Installation
 
 ```bash
-composer require webbingbrasil/filament-copyactions
+composer require elastico/filament-copy-actions
 ```
 
 ## Usage
@@ -106,9 +106,3 @@ protected function getActions(): array
 ```
 
 The action will display a copy status, you can customize the success message with the `successNotificationMessage` method or the error message with the `errorNotificationMessage` method.
-
-## Credits
-
--   [Danilo Andrade](https://github.com/dmandrade)
-
-custom table column with copy button and actions to use with any form field, page or table. Actions display a filament notification for status.

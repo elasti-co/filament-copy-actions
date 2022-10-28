@@ -10,6 +10,8 @@ class CopyableTextColumn extends TextColumn
 {
 	protected string | Closure | null $icon = 'heroicon-o-clipboard-copy';
 	
+	protected string | Closure | null $iconClasses = 'w-6 h-6';
+	
 	protected string | Closure | null $copyIconColor = null;
 	
 	protected string | Closure | null $iconPosition = 'after';
@@ -19,6 +21,20 @@ class CopyableTextColumn extends TextColumn
 	protected string | Closure | null $copySuccessMessage = 'Copied!';
 	
 	protected string $view = 'filament-copy-actions::columns.copyable-text-column';
+	
+	
+	public function iconClasses(string | Closure | null $iconClasses) : static
+	{
+		$this->iconClasses = $iconClasses;
+		
+		return $this;
+	}
+	
+	
+	public function getIconClasses() : string
+	{
+		return $this->evaluate($this->iconClasses);
+	}
 	
 	
 	public function successMessage(string | Closure | null $message) : static

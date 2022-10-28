@@ -2,6 +2,7 @@
     $state = $getFormattedState();
     $copyableText = $getCopyableText();
     $icon = $getIcon();
+    $iconClasses = $getIconClasses();
     $iconColor = $getIconColor();
     $iconPosition = $getIconPosition();
     $successMessage = $getSuccessMessage();
@@ -16,18 +17,20 @@
     <div @class([
         'inline-flex items-center justify-center space-x-1 rtl:space-x-reverse min-h-6 py-0.5 rounded-xl whitespace-normal',
         ])>
-        @if (filled($copyableText) && $icon && $iconPosition === 'before')
+        @if ($icon && $iconPosition === 'before' && filled($copyableText))
             <x-filament-copy-actions::copy-button :content="$copyableText"
                     :icon="$icon"
+                    :iconClasses="$iconClasses"
                     :iconColor="$iconColor"
                     :successMessage="$successMessage" />
         @endif
         <div>
             {{ $state }}
         </div>
-        @if (filled($copyableText) && $icon && $iconPosition === 'after')
+        @if ($icon && $iconPosition === 'after' && filled($copyableText))
             <x-filament-copy-actions::copy-button :content="$copyableText"
                     :icon="$icon"
+                    :iconClasses="$iconClasses"
                     :iconColor="$iconColor"
                     :successMessage="$successMessage" />
         @endif
