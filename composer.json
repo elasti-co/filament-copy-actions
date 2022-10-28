@@ -1,5 +1,6 @@
 {
     "name": "elasti-co/filament-copy-actions",
+    "version": "0.1.0",
     "description": "An easy-to-use copy actions for Filament Admin.",
     "keywords": [
         "laravel",
