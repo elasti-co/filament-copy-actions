@@ -1,0 +1,38 @@
+{
+    "name": "elasti-co/filament-copy-actions",
+    "description": "An easy-to-use copy actions for Filament Admin.",
+    "keywords": [
+        "laravel",
+        "filament"
+    ],
+    "homepage": "https://github.com/elasti-co/filament-copy-actions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danilo Andrade",
+            "email": "danilo@webbingbrasil.com.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "filament/filament": "^2.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "ElastiCo\\FilamentCopyActions\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ElastiCo\\FilamentCopyActions\\FilamentCopyActionsProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
